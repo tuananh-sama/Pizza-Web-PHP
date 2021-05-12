@@ -88,7 +88,7 @@ echo
     }
 
     $sql ="select * from sanpham where idSP!=0 ";
-    if($search_txt != "")
+    if($search_txt != "")   
         $sql .="AND tenSP_kd like '%$search_txt%' ";
     if($id != "0") 
         $sql .="AND idCL='$id' ";
@@ -110,13 +110,13 @@ echo
     }
     $limit = 6;
     $start = ($current_page-1)*$limit;
-	
+
 	$sql .=" limit $start,$limit";
 	$run = mysqli_query($con,$sql);
 ?>
 <div class="search">
-    <?php 
-        if(@mysqli_num_rows($run)>0)
+    <?php
+        if($run!=false && @mysqli_num_rows($run)>0)
         {
             while($rows=mysqli_fetch_assoc($run))
             {
