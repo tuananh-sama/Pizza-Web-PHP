@@ -29,7 +29,7 @@ echo
         </div>
         <div class="col-md-3">
             <div class="form-group">
-                <label for="idCL" style="font-size:20px">Loại hoa</label>
+                <label for="idCL" style="font-size:20px">Loại Pizza</label>
                 <select class="form-control" name="id" id="idCL">
                     <option value="0">--- Chọn Loại ---</option>';
                     
@@ -44,7 +44,7 @@ echo
         </div>
         <div class="col-md-3">
             <div class="form-group">
-                <label for="idgia" style="font-size:20px">Loại hoa</label>
+                <label for="idgia" style="font-size:20px">Loại Pizza</label>
                 <select class="form-control" name="idgia" id="idgia">
                     <option value="0">--- Chọn Mức Giá ---</option>
                     <option value="1">Dưới 300.000 VNĐ</option>
@@ -67,10 +67,11 @@ echo
 ?>
 
 <?php
-	$search_txt=' ';
-	$id=0; $idgia=0;
+	$search_txt='';
+	$id=0; 
+        $idgia=0;
 	if($_GET['searchtext']!='')
-    $search_txt = $_GET['searchtext'];
+            $search_txt = $_GET['searchtext'];
 	if(isset($_GET['id'])){
 	    $id = $_GET['id']; // lấy loại sản phẩm
     	$idgia = $_GET['idgia']; // lấy mức giá
