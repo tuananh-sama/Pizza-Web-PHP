@@ -22,10 +22,10 @@
                 </ul>
             </li>
             <li>
-                <a href="#">Tin Tức<i class="fas fa-angle-down" style="float:right;line-height:40px"></i></a>
+                <a href="#">Khuyến Mãi<i class="fas fa-angle-down" style="float:right;line-height:40px"></i></a>
                 <ul class="child">
-                    <li><a href="index.php?quanly=themtintuc">Thêm Tin Tức</a></li>
-                    <li><a href="index.php?quanly=danhsachtintuc">Danh Sách Tin Tức</a></li>
+                    <li><a href="index.php?quanly=themkhuyenmai">Thêm Khuyến Mãi</a></li>
+                    <li><a href="index.php?quanly=danhsachkhuyenmai">Danh Sách Khuyến Mãi</a></li>
                 </ul>
             </li>
             <?php 

@@ -1,5 +1,5 @@
 <div id="content">
-    <?php 
+    <?php
         if(isset($_GET['quanly']))
             $tam = $_GET['quanly'];
         else
@@ -19,9 +19,9 @@
 					case 'danhsachsanpham': include('quanlysanpham/danhsachsp.php'); break;
 					case 'suasanpham': include('quanlysanpham/suasp.php'); break;
 	
-					case 'themtintuc': include('quanlytintuc/themtt.php'); break;
-					case 'danhsachtintuc': include('quanlytintuc/danhsachtt.php'); break;
-					case 'suatintuc': include('quanlytintuc/suatt.php'); break;
+					case 'themkhuyenmai': include('quanlykhuyenmai/themkm.php'); break;
+					case 'danhsachkhuyenmai': include('quanlykhuyenmai/danhsachkm.php'); break;
+					case 'suakhuyenmai': include('quanlykhuyenmai/suakm.php'); break;
 	
 					case 'themthanhvien': include('quanlythanhvien/themtv.php'); break;
 					case 'danhsachthanhvien': include('quanlythanhvien/danhsachtv.php'); break;
@@ -48,9 +48,9 @@
 					case 'danhsachsanpham': include('quanlysanpham/danhsachsp.php'); break;
 					case 'suasanpham': include('quanlysanpham/suasp.php'); break;
 	
-					case 'themtintuc': include('quanlytintuc/themtt.php'); break;
-					case 'danhsachtintuc': include('quanlytintuc/danhsachtt.php'); break;
-					case 'suatintuc': include('quanlytintuc/suatt.php'); break;
+					case 'themkhuyenmai': include('quanlykhuyenmai/themkm.php'); break;
+					case 'danhsachkhuyenmai': include('quanlykhuyenmai/danhsachkm.php'); break;
+					case 'suakhuyenmai': include('quanlykhuyenmai/suakm.php'); break;
 
 					case 'themthanhvien': echo '<script>alert("Bạn không có quyền");window.history.back();</script>'; break;
 					case 'danhsachthanhvien': echo '<script>alert("Bạn không có quyền");window.history.back();</script>'; break;

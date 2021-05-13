@@ -4,7 +4,7 @@
     $run = mysqli_query($conn,$sql);
 ?>
 <div class="container">
-    <h2 class="text-center">Danh sách tin tức</h2>           
+    <h2 class="text-center">Danh sách khuyến mãi</h2>           
     <table class="table table-hover" style="text-align:center">
         <thead>
             <tr>
@@ -27,22 +27,22 @@
                 <td><?php echo $dong['tenKM'] ?></td>
                 <td>
                     <?php 
-                        $sql1 = "select * from khuyenmai,taikhoan where khuỵenmai.idKM=taikhoan.idUser";
+                        $sql1 = "select * from khuyenmai,taikhoan where khuyenmai.idKM=taikhoan.idUser";
                         $run1 = mysqli_query($conn,$sql1);
                         $dong1 = mysqli_fetch_array($run1,MYSQLI_ASSOC);
                         echo $dong1['name'];
                     ?>
                 </td>
-                <td><?php echo date("d-m-Y", strtotime($dong['ngaydangTT'])); ?></td>
-                <td><?php echo $dong['motaTT'] ?></td>
-                <td><?php echo date("d-m-Y", strtotime($dong['ngaytuTT'])); ?></td>
-                <td><?php echo date("d-m-Y", strtotime($dong['ngaydenTT'])); ?></td>
-                <td><img src="uploads/<?php echo $dong['hinhanhTT']?>" alt="" width="100px"></td>
+                <td><?php echo date("d-m-Y", strtotime($dong['ngaydangKM'])); ?></td>
+                <td><?php echo $dong['motaKM'] ?></td>
+                <td><?php echo date("d-m-Y", strtotime($dong['ngaytuKM'])); ?></td>
+                <td><?php echo date("d-m-Y", strtotime($dong['ngaydenKM'])); ?></td>
+                <td><img src="uploads/<?php echo $dong['hinhanhKM']?>" alt="" width="100px"></td>
                 <td align="center">
-                    <?php echo "<a href='index.php?quanly=suatintuc&id=$dong[idTT]'><i class='fa fa-edit'></i></a>" ?>
+                    <?php echo "<a href='index.php?quanly=suakhuyenmai&id=$dong[idKM]'><i class='fa fa-edit'></i></a>" ?>
                 </td>
                 <td align="center">
-                    <?php echo "<a onclick= \" return confirm('Bạn thật sự muốn xóa tin tin này sao?') \" href='modules/quanlytintuc/xuly.php?act=xoa&id=$dong[idTT]'><i class='fa fa-trash'></i></a>" ?>
+                    <?php echo "<a onclick= \" return confirm('Bạn thật sự muốn xóa tin tin này sao?') \" href='modules/quanlykhuyenmai/xuly.php?act=xoa&id=$dong[idKM]'><i class='fa fa-trash'></i></a>" ?>
                 </td>
             </tr>
             <?php

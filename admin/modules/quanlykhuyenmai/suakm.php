@@ -1,19 +1,19 @@
 <?php
     include('../core/config.php');
-    $sql = "select * from tintuc where idTT='$_GET[id]'";
+    $sql = "select * from khuyenmai where idKM='$_GET[id]'";
     $dong = mysqli_fetch_array(mysqli_query($conn,$sql),MYSQLI_ASSOC);
 ?>
 <div class="form-wrapper">
-    <form action="modules/quanlytintuc/xuly.php?id=<?php echo $dong['idTT']?>" method="post" enctype="multipart/form-data">
+    <form action="modules/quanlykhuyenmai/xuly.php?id=<?php echo $dong['idKM']?>" method="post" enctype="multipart/form-data">
         <h2>Sửa Tin Tức</h2>
         <table style="width: 100%; font-size: 18px;" cellspacing="10">
         <tr>
             <td>Tên tiêu đề</td>
-            <td><input type="text" name="tenTT" value="<?php echo $dong['tenTT']?>"/></td>
+            <td><input type="text" name="tenKM" value="<?php echo $dong['tenKM']?>"/></td>
         </tr>
         <tr>
             <td>Tên tiêu đề (không dấu)</td>
-            <td><input type="text" name="tenTT_kd" value="<?php echo $dong['tenTT_kd'] ?>" /></td>
+            <td><input type="text" name="tenKM_kd" value="<?php echo $dong['tenKM_kd'] ?>" /></td>
         </tr>
         <tr>
             <td>Đăng bởi</td>
@@ -34,23 +34,23 @@
         </tr>	
         <tr>
             <td>Ngày đăng</td>
-            <td><input type="date" name="ngaydangTT" style="width:30%;padding:4px 12px;box-sizing:border-box;border:1px solid rgb(180,180,180);border-radius:6px;outline:none;font-size:18px;color:rgba(40,40,40,0.75)"/></td>
+            <td><input type="date" name="ngaydangKM" style="width:30%;padding:4px 12px;box-sizing:border-box;border:1px solid rgb(180,180,180);border-radius:6px;outline:none;font-size:18px;color:rgba(40,40,40,0.75)"/></td>
         </tr>	
         <tr>
             <td>Mô tả</td>
-            <td><textarea name="motaTT" id="ckeditor3" rows="10" style="font-size:16px;"><?php echo $dong['motaTT']?></textarea></td>
+            <td><textarea name="motaKM" id="ckeditor3" rows="10" style="font-size:16px;"><?php echo $dong['motaKM']?></textarea></td>
             <script typy="text/javascript">CKEDITOR.replace("ckeditor3")</script>
         </tr>
         <tr>
             <td>Áp dụng từ</td>
-            <td><input name="ngaytuTT" type="date" style="width:30%;padding:4px 12px;box-sizing:border-box;border:1px solid rgb(180,180,180);border-radius:6px;outline:none;font-size:18px;color:rgba(40,40,40,0.75)"/></td>
+            <td><input name="ngaytuKM" type="date" style="width:30%;padding:4px 12px;box-sizing:border-box;border:1px solid rgb(180,180,180);border-radius:6px;outline:none;font-size:18px;color:rgba(40,40,40,0.75)"/></td>
         </tr>
         <tr>
             <td>Áp dụng đến</td>
-            <td><input name="ngaydenTT" type="date" style="width:30%;padding:4px 12px;box-sizing:border-box;border:1px solid rgb(180,180,180);border-radius:6px;outline:none;font-size:18px;color:rgba(40,40,40,0.75)"/></td>
+            <td><input name="ngaydenKM" type="date" style="width:30%;padding:4px 12px;box-sizing:border-box;border:1px solid rgb(180,180,180);border-radius:6px;outline:none;font-size:18px;color:rgba(40,40,40,0.75)"/></td>
         </tr>        <tr>
             <td>Hình ảnh</td>
-            <td><input type="file" name="hinhanhTT"/></td>
+            <td><input type="file" name="hinhanhKM"/></td>
         </tr>
         <tr>
             <td colspan="2">
