@@ -10,7 +10,7 @@
         $idUser = isset($_SESSION['user'])?$_SESSION['user']['idUser']:0;
         $tongtienDH = $_POST['total'];
         $sql = "insert into donhang(idUser,nameDH,phoneDH,addressDH,emailDH,tongtienDH,ngayDH,statusDH)
-                values('$idUser','$name','$phone','$address','$email','".@number_format($tongtienDH,0,"","")."','".date('Y-m-d')."','1')";
+                values('$idUser','$name','$phone','$address','$email','".$tongtienDH."','".date('Y-m-d')."','1')";
         mysqli_query($conn,$sql);
         $last_id = mysqli_insert_id($conn);
         foreach($_SESSION['cart'] as $key => $value)
