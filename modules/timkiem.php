@@ -188,7 +188,7 @@ echo
         var tenSP = $("#tenSP").val();
         var id = $("#idCL").val();
         var idgia = $("#idgia").val();
-        $.get("modules/content/timkiem.php",{searchtext:tenSP,id:id,idgia:idgia},function(data){
+        $.get("modules/timkiem.php",{searchtext:tenSP,id:id,idgia:idgia},function(data){
             $(".search").html(data);
         })
     });
